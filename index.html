@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pathshala | From Confusion to Mastery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .scrolly-section {
+            background: #fff;
+            padding: 100px 0;
+        }
+
+        .step-active {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+
+        .step-inactive {
+            opacity: 0.3;
+            transform: scale(0.95);
+            transition: all 0.5s ease;
+        }
+
+        .visual-state {
+            display: none;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .visual-state.active {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="glass"
+        style="height: 80px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div class="logo"
+                style="font-size: 24px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 12px;">
+                <div
+                    style="width: 36px; height: 36px; background: var(--primary); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--secondary); font-size: 20px;">▲</span>
+                </div>
+                AI Pathshala
+            </div>
+            <div style="display: flex; gap: 40px; align-items: center; font-weight: 600; font-size: 15px;">
+                <a href="#journey">The Journey</a>
+                <a href="app.html?view=parent">Parent Dashboard</a>
+                <a href="app.html" class="btn btn-primary">Launch Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container hero-v2">
+        <div class="hero-text">
+            <div
+                style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(0,33,71,0.05); color: var(--primary); border-radius: 100px; font-size: 14px; font-weight: 600; margin-bottom: 32px;">
+                <span>✨</span> AI-Driven Gap Detection for K-12
+            </div>
+            <h1>Stop Guessing. <br><span style="color: var(--secondary);">Start Mastering.</span></h1>
+            <p style="font-size: 22px; margin-bottom: 48px; max-width: 600px;">AI Pathshala doesn't just teach. It finds
+                the forgotten "Gaps" in your child's foundation and fixes them with precision.</p>
+            <div style="display: flex; gap: 20px;">
+                <a href="app.html" class="btn btn-primary" style="padding: 18px 36px; font-size: 18px;">Get Started
+                    Free</a>
+                <a href="#journey" class="btn btn-outline">See Aryan's Journey</a>
+            </div>
+        </div>
+        <div class="hero-demo">
+            <div class="sticky-frame glass" style="padding: 30px; border: 4px solid var(--primary);">
+                <div style="height: 20px; width: 100%; display: flex; gap: 8px; margin-bottom: 24px;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+                </div>
+                <div style="text-align: center; padding: 40px 0;">
+                    <div
+                        style="width: 140px; height: 140px; border-radius: 50%; border: 12px solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; position: relative;">
+                        <span style="font-size: 32px; font-weight: 800;">74%</span>
+                        <div
+                            style="position: absolute; top: -10px; right: -10px; background: var(--alert); color: white; padding: 4px 8px; font-size: 10px; border-radius: 4px; font-weight: 800; animation: pulse-red 2s infinite;">
+                            GAP!</div>
+                    </div>
+                    <h3 style="margin-bottom: 8px;">Algebra Readiness</h3>
+                    <p style="font-size: 14px;">"Dependency found: <strong>Ratio</strong> knowledge is weak."</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="trust-strip">
+        <div class="container">
+            <p
+                style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; color: var(--text-muted);">
+                Trusted by Educators & Parents nationwide</p>
+            <div class="trust-logos">
+                <span style="font-weight: 800; font-size: 20px;">CBSE</span>
+                <span style="font-weight: 800; font-size: 20px;">ICSE</span>
+                <span style="font-weight: 800; font-size: 20px;">IGCSE</span>
+                <span style="font-weight: 800; font-size: 20px;">NCERT Aligned</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="journey" class="scrolly-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 100px; font-size: 48px;">How Aryan Fixed his Algebra Gap</h2>
+
+            <div class="step-container">
+                <div class="step-text">
+                    <div class="step-inactive" id="step1">
+                        <h3 style="font-size: 32px; margin-bottom: 20px;">01. Detection</h3>
+                        <p style="font-size: 18px;">Aryan was struggling with Algebra equations. Instead of just "more
+                            practice," our AI identified why: He missed a core concept in <strong>Ratios</strong> two
+                            years ago.</p>
+                    </div>
+                    <div style="height: 300px;"></div>
+                    <div class="step-inactive" id="step2">
+                        <h3 style="font-size: 32px; margin-bottom: 20px;">02. Smart Correction</h3>
+                        <p style="font-size: 18px;">The system automatically paused the current chapter and unlocked a
+                            <strong>"Smart Explain"</strong> session on Ratios, using visual metaphors he could actually
+                            visualize.</p>
+                    </div>
+                    <div style="height: 300px;"></div>
+                    <div class="step-inactive" id="step3">
+                        <h3 style="font-size: 32px; margin-bottom: 20px;">03. Verified Mastery</h3>
+                        <p style="font-size: 18px;">Once the foundation was fixed, the Algebra "Red Node" turned Green.
+                            His Exam Readiness score jumped from 60% to 90% in just 48 hours.</p>
+                    </div>
+                </div>
+
+                <div class="step-sticky">
+                    <div class="sticky-frame glass" id="visual-frame">
+                        <div class="visual-state active" id="viz1">
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                <div class="hexagon hex-mastered"><span>Fractions</span></div>
+                                <div style="width: 40px; height: 4px; background: var(--secondary);"></div>
+                                <div class="hexagon hex-gap" style="animation: pulse-red 2s infinite;">
+                                    <span>Ratio</span></div>
+                                <div style="width: 40px; height: 4px; background: var(--border-color);"></div>
+                                <div class="hexagon"><span>Algebra</span></div>
+                            </div>
+                            <p style="margin-top: 40px; font-weight: 600; color: var(--alert);">AI Insight: Foundational
+                                Gap Detected</p>
+                        </div>
+                        <div class="visual-state" id="viz2">
+                            <div class="card" style="width: 80%; padding: 24px; border-left: 6px solid var(--accent);">
+                                <h4>Explain Simpler: Ratios</h4>
+                                <p style="font-size: 14px; margin-top: 10px;">"Ratio is just like a recipe. If you need
+                                    1 cup of sugar for 2 cups of flour, the ratio is 1:2. Double it? 2:4. It stays
+                                    balanced."</p>
+                            </div>
+                        </div>
+                        <div class="visual-state" id="viz3">
+                            <div style="display: flex; gap: 20px; align-items: center;">
+                                <div class="hexagon hex-mastered"><span>Ratio</span></div>
+                                <div style="width: 40px; height: 4px; background: var(--secondary);"></div>
+                                <div class="hexagon hex-mastered"><span>Algebra</span></div>
+                            </div>
+                            <h2 style="color: var(--secondary); margin-top: 40px;">Ready for Exam ✨</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--primary); color: white; text-align: center; padding: 120px 0;">
+        <div class="container">
+            <h2 style="color: white; font-size: 56px; margin-bottom: 24px;">Turn confusion into confidence.</h2>
+            <p style="color: rgba(255,255,255,0.7); font-size: 24px; margin-bottom: 60px;">Join 50,000+ students on the
+                path to mastery.</p>
+            <a href="app.html" class="btn"
+                style="background: var(--secondary); color: white; padding: 20px 48px; font-size: 20px;">Start Mastery
+                Journey</a>
+        </div>
+    </section>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--border-color); text-align: center;">
+        <p>&copy; 2026 AI Pathshala. Built by PhD Educationists. <a href="#"
+                style="margin-left: 20px; color: var(--primary);">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.6
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stepId = entry.target.id;
+                    const index = stepId.replace('step', '');
+
+                    // Activate Text
+                    document.querySelectorAll('.step-text > div').forEach(div => div.classList.add('step-inactive'));
+                    entry.target.classList.remove('step-inactive');
+                    entry.target.classList.add('step-active');
+
+                    // Activate Visual
+                    document.querySelectorAll('.visual-state').forEach(v => v.classList.remove('active'));
+                    document.getElementById('viz' + index).classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.step-text > div[id^="step"]').forEach(step => observer.observe(step));
+    </script>
+</body>
+
+</html>
